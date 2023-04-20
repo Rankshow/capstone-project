@@ -98,7 +98,6 @@ header{
 /* section-one style */
 .section-one {
   background-image: url(./image/green-grass.png);
-  /* background-repeat: no-repeat; */
   background-position: cover;
   height: 669px;
   max-width: 100%;
@@ -116,43 +115,78 @@ header{
   line-height: 24px;
   max-width: 673px;
 }
-/* section-two-page */
-.page-two {
+/* section-two-page and main page */
+.page-head{
   background-color: #306410;
+  height: 362px;
+  width: 610px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
 }
 .page-wrapper {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   height: 600px;
-  color: #ffff;
+  color: #000;
 }
-.page-text{
-  /* text-align: center; */
+.main-container, .page-three-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 600px;
+  color: #000;
+
+}
+.page-list{
+  list-style: inside;
+}
+.page-text,.main-title{
   margin-bottom: .5em;
 }
-.page-content{
+.page-content,.page-content{
   line-height: 24px;
 }
-.ridges{
+.ridges,.soil-img{
   height: 362px;
   width: 610px;
 }  
-
+.main-text,.page-three-content{
+  width: 500px;
+  padding-bottom: 2em;
+}
 /* style main layout */
-.main-wrapper{
-  background-color: #306410;
-}
-.main-container {
-  display: flex;
-}
 .main-title{
  text-align: center;
 }
 .page-content {
   width: 400px;
 }
-/* continiue from layout two */
+/* button layout */
+.main-btn{
+  display: block;
+  margin: 0 auto;
+  background-color: #A8D75CD4;
+  padding: 1em 3em; 
+  border: none;
+  border-radius: 20px;
+  font-weight: 800;
+}
+.main-btn:hover{
+  opacity: .75;
+}
+.inner-button{
+  display: flex;
+  justify-content: space-evenly;
+}
+.arrow-img {
+  margin-left: .9em;
+}
+
+
 /* Responsiveness for main section layout */
 @media(max-width: 768px){
   /* section-two layout style */
@@ -161,18 +195,21 @@ header{
     justify-content: center;
     flex-direction: column;
   }
-  .main-container{
+  
+  .main-container,.page-three-container{
     flex-direction: column;
+  }
+  .page-three-container{
+    padding-bottom: 2.8em;
+  }
+  .page-three-image{
+    margin-top: -3em;
   }
   .main-img{
     display: flex;
     justify-content: center;
     margin-top: 4em;
     margin-bottom: 3em;
-  }
-  .img-main{
-    width: 350px;
-    height: 262px;
   }
   .main-title{
     text-align: center;
@@ -203,30 +240,92 @@ header{
   .arrow-img {
     margin-left: .9em;
   }
+  .page-content{
+    font-size: 16px;
+  }
+  .page-text{
+    text-align: center;
+    font-size: 20px;
+    margin-top: 10px;
+  }
+  .ridges{
+   width: 300px;
+   margin-top: 2em;
+  }
+  .img-tomatoe{
+  width: 340px;
+  margin-top: 2em;
+}
+.soil-img{
+    width: 340px;
+    height: 300px;
+    margin-top: 2em;
+  }
+  .page-three-content{
+    width: 350px;
+    margin-top: 50px;
+    font-size: 13.1px;
+    color: #000;
+  }
 }
 /* Tablet screen size */
 @media(max-width: 820px) {
-  .main-container{
+  .main-container, .page-wrapper,.page-three-container{
     flex-direction: column;
   }
   .main-img{
     display: flex;
     justify-content: center;
-    margin-top: 4em;
+    margin-top: 9em;
     margin-bottom: 3em;
 }
-.img-main{
+.img-main,.ridges{
   width: 610px;
   height: 362px;
 }
 .main-title{
   text-align: center;
+  color: #000;
 }
-.main-text {
+.main-text, .page-content {
   padding: 1em 0;
-  font-size: 20px;
+  font-size: 18px;
   width: 90%;
-  /* text-align: center; */
   margin: 0 auto;
+  color: #000;
+  font-weight: 700;
+}
+.page-text{
+  text-align: center;
+}
+/* button style */
+.main-btn{
+  display: block;
+  margin: 0 auto;
+  background-color: #A8D75CD4;
+  padding: 1em 3em; 
+  border: none;
+  border-radius: 20px;
+  font-weight: 800;
+}
+.main-btn:hover{
+  opacity: .75;
+}
+.inner-button{
+  display: flex;
+  justify-content: space-evenly;
+}
+.arrow-img {
+  margin-left: .9em;
+}
+.page-head{
+  background-color: #306410;
+  height: 362px;
+  width: 610px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
 }
 }
