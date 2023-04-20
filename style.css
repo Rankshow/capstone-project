@@ -152,7 +152,7 @@ header{
 .page-content {
   width: 400px;
 }
-
+/* continiue from layout two */
 /* Responsiveness for main section layout */
 @media(max-width: 768px){
   /* section-two layout style */
