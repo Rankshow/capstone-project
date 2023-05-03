@@ -6,7 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
 <link rel="shortcut icon" type="image/png" href="./image/FARMER ASSIST 22222 2.png"/>
-  <link rel="stylesheet" href="register.css">
+<link rel="stylesheet" href="register.css">
+
+
+
   <title>Register Page</title>
 </head>
 <body>
@@ -19,35 +22,54 @@
     <h1 class="account">Create Account</h1>
     <div class="form-content">
 
-    <form action="profile.html">
+        <div>
+          <div id="msg-status" class=""><!-- style this span in this div for displaying message to the user from the backend.. 
+          You can put a sample text between the  to preview how it looks after styling --></div>
+        </div>
+
+    <form id="registerForm" method="post" action="">
       <label for="Name">Enter Full Name</label><sup>*</sup><br/>
-      <input type="text" placeholder="Enter Full Name" class="Name" required><br/>
+      <input type="text" placeholder="Enter Full Name" name="name" id="txt-name" class="Name"  ><br/>
 
       <label for="">Enter your email</label><sup>*</sup><br/>
-      <input type="text" placeholder="Enter email" class="Email" required><br/>
-
-      <label for="">Password</label><sup>*</sup><br/>
-      <input type="text" placeholder="Password" class="password" required><br/>
-
-      <label for="">Occupation</label><sup>*</sup><br/>
-      <input type="text" placeholder="occupation" class="Occupation" required><br/>
-
-      <label for="">State</label><sup>*</sup><br/>
-      <input type="text" placeholder="write your state" class="state" required><br/>
-
-      <label for="">Local Government</label><sup>*</sup><br/>
-      <input type="text" placeholder="Local Government" class="Lgovt" required><br/>
+      <input type="text" placeholder="Enter email" class="Email"  name="email" id="txt-email" ><br/>
 
       <label for="">Phone Number</label><sup>*</sup><br/>
-      <input type="number" placeholder="Local Government" class="number" required><br/>
+      <input type="number" placeholder="Phone Number" class="number" name="phone"  id="txt-phone" ><br/>
+
+      <label for="">Password</label><sup>*</sup><br/>
+      <input type="text" placeholder="Password" class="password"  name="password" id="txt-password" ><br/>
+
+      <!-- Added this verify password field -->
+      <label for="">Verify Password</label><sup>*</sup><br/>
+      <input type="text" placeholder="Password" class="password"  name="password" id="txt-verifyPassword" ><br/>
+
+      <label for="">Occupation</label><sup>*</sup><br/>
+      <input type="text" placeholder="occupation" class="Occupation" id="txt-occupation"  name="occupation"  ><br/>
+
+     <label for="">State</label><sup>*</sup><br/>
+      <input type="text" placeholder="write your state" class="state"  name="state" id="txt-state" ><br/>
+
+      <label for="">Local Government</label><sup>*</sup><br/>
+      <input type="text" placeholder="Local Government" class="Lgovt" name="lga" id="txt-lga" ><br/>
 
       <label for="">Language</label><sup>*</sup><br/> 
-      <input type="text" placeholder="Write your preferred language" class="lang" required><br/>
+      <input type="text" placeholder="Write your preferred language" class="lang"  name="language" id="txt-language" ><br/>
+
+      <!-- Drop down or radio to selce between tracks -->
+      <label for="">Track</label><sup>*</sup><br/>
+      <input type="text" placeholder="Password" name="password" id="txt-track" ><br/>
+
        
-      <button class="acct-btn">Create Account</button>
+      <button type="submit" name="signUp" id="btn-signUp" class="acct-btn">Create Account</button>
+
+
     </form>
-    <p class="footer-content">By signing up you agree to our  terms and policy</p>
+    <p class="footer-content">By signing up you agree to our terms and policy</p>
   </div>
  </div>
+ <script src="/js/jquery.js"></script>
+ <script src="/js/main.js"></script>
+
 </body>
 </html>
