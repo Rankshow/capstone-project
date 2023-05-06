@@ -4,5 +4,5 @@ const navContainer = document.querySelector(".nav-container");
 hamburger.addEventListener("click", () =>{
   hamburger.classList.toggle("active");
   navContainer.classList.toggle("active");
-  navContainer.Style.backgroundColor = "blue";
+  // navContainer.Style.backgroundColor = "blue";
 })
