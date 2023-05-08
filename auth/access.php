@@ -8,11 +8,11 @@ if (empty($_SESSION)) {
 
 
 //session variables
-$user = $_SESSION['user'];
-$name = $_SESSION['name'];
-$email = $_SESSION['email'];
-$occupation = $_SESSION['occupation'];
-$state = $_SESSION['state'];
-$lga = $_SESSION['lga'];
-$phone = $_SESSION['phone'];
-$language = $_SESSION['language'];
+$my_user = $_SESSION['user'];
+$my_name = $_SESSION['name'];
+$my_email = $_SESSION['email'];
+$my_occupation = $_SESSION['occupation'];
+$my_state = $_SESSION['state'];
+$my_lga = $_SESSION['lga'];
+$my_phone = $_SESSION['phone'];
+$my_language = $_SESSION['language'];

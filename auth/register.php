@@ -1,7 +1,11 @@
 <?php
 include_once('dbconn.php');
-// $errMsg[] = [];
 
+if (isset($_SESSION['user'])) {
+    header('location: home.html.php');
+}
+// $errMsg[] = [];
+if (isset($_POST['signUp'])) {
 	$name = htmlspecialchars($_POST['name']);
 	$email = strtolower($_POST['email']);
     $password = htmlspecialchars($_POST['password']);
@@ -96,16 +100,19 @@ include_once('dbconn.php');
 			echo "Error: " . $e->getMessage();
 		}
 	} else {
-		echo "<script>
-		alert(' Failed')
-		</script>";
+		// echo "<script>
+		// alert(' Failed'); window.location='../register.html'
+		// </script>";
 		// header('location: ../register.html.php');
 	}
 
 	if (isset($errMsg)) {
 		foreach ($errMsg as $msg) {
-				echo $msg;
+				echo "$msg <br>";
+				
 			}
 	}
-	
+} else {
+	header('location: ../index.html');
+	}
 
