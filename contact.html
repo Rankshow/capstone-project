@@ -45,14 +45,14 @@
      <div class="form-img"><img class="map-img" src="./image/Map.png" alt="Map-img"></div>
 
      <div class="form">
-      <form action="#">
-        <input type="text" placeholder="Name" id="Name" required><br/>
-        <input type="text" placeholder="Email" id="Email" required><br/>
-        <input type="number" placeholder="Phone Number" id="Number" required><br/>
-        <input type="text" placeholder="Occupation" id="Occupation" required><br/>
-        <input type="text" placeholder="State your purpose" id="purpose" required><br/>
-        <textarea name="Message" id="Message" cols="58" value="" placeholder="Message" rows="16"></textarea><br/>
-        <button type="submit" class="about-btn">Send</button>
+      <form action="./info/contact-us.php" method="POST">
+        <input type="text" placeholder="Name" id="Name" name="name" required><br/>
+        <input type="text" placeholder="Email" id="Email" name="email" required><br/>
+        <input type="number" placeholder="Phone Number" id="Number" name="phone" required><br/>
+        <input type="text" placeholder="Occupation" id="Occupation" name="occupation" required><br/>
+        <input type="text" placeholder="State your purpose" id="purpose" name="subject" required><br/>
+        <textarea id="Message" cols="58" value="" name="message" placeholder="Message" rows="16"></textarea><br/>
+        <button type="submit" name="contact-us" class="about-btn">Send</button>
       </form>
      </div>
    </div>

@@ -1,13 +1,19 @@
 <?php
 include_once('dbconn.php');
 
+
+if (isset($_SESSION['user'])) {
+    header('location: home.html.php');
+}
+
+
 if (isset($_POST['login'])) {
 
     $loginId = htmlspecialchars(strtolower($_POST['loginId']));
     $password = htmlspecialchars($_POST['password']);
 
     if (empty($loginId)) {
-        $errMsg['login'] = "Input your email.";
+        $errMsg['login'] = "Input your email or phone number.";
     } elseif (empty($password)) {
         $errMsg['login'] = "Please enter your password";
     } else {
@@ -30,8 +36,8 @@ if (isset($_POST['login'])) {
                     $_SESSION['lga'] = $result['lga'];
                     $_SESSION['phone'] = $result['phone'];
                     $_SESSION['language'] = $result['language'];
-
-                    header('location: profile.html.php');
+                    
+                    header('location: ../info/profile.html.php');
                 } else {
                     $errMsg['login'] = "Invalid login details.";
                 }
@@ -43,10 +49,12 @@ if (isset($_POST['login'])) {
             echo "Error: " . $e->getMessage();
         }
     }
+
+    if (isset($errMsg)) {
+        foreach ($errMsg as $msg) {
+            echo $msg . "<br>";
+        }
+    }
+} else {
+    header('location: ../index.html');
 }
-
-
-
-
-
-

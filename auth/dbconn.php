@@ -1,8 +1,8 @@
 <?php
 
 $host = 'localhost';
-$user = 'root';
-$dbpass = '';
+$user = 'paradox';
+$dbpass = 'paradox';
 $dbname = 'digi';
 
 try {
