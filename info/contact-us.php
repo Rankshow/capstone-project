@@ -1,6 +1,7 @@
 <?php
 // require "vendor/autoload.php";
-include(__DIR__ . '/auth/dbconn.php');
+include_once __DIR__ . '/../auth/dbconn.php';
+include_once __DIR__ . '/../auth/function.php';
 
 
 if (isset($_POST['contact-us'])) {

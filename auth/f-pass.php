@@ -1,45 +1,60 @@
 <?php
 $title = "Forget Password";
-include_once('/dbconn.php');
+include_once __DIR__ . '/../inc/header.php';
 
-if (isset($_POST['fget-pass'])) {
-	$loginId = htmlspecialchars(strtolower($_POST['loginId']));
+// include_once __DIR__ . '/dbconn.php';
 
-	if (empty($loginId)) {
-		echo "Please enter your email";
-	} elseif (!empty($loginId)) {
-		try {
-			$sql = "SELECT * FROM users WHERE email = :loginId OR phone = :loginId";
-			$stmt = $pdo->prepare($sql);
-			$stmt->bindValue(':loginId', $loginId);
-			$stmt->execute();
-			$result = $stmt->fetch(PDO::FETCH_ASSOC);
+// if (isset($_POST['fget-pass'])) {
+// 	$loginId = htmlspecialchars(trim($_POST['loginId']));
+// 	$token = md5(rand());
+                                                                                                                                                                                            
+// 	if (empty($loginId)) {
+// 		echo "Please enter your email";
+// 	} elseif (!empty($loginId)) {
+// 		try {
+// 			$sql = "SELECT * FROM users WHERE email = :loginId OR phone = :loginId";
+// 			$stmt = $pdo->prepare($sql);
+// 			$stmt->bindValue(':loginId', $loginId);
+// 			$stmt->execute();
+// 			$result = $stmt->fetch(PDO::FETCH_ASSOC);
 
-			if ($stmt->execute() > 0) {
-				if ($result['email'] == $loginId || $result['phone'] == $loginId) {
-					echo "please check ur email";
-				} else {
-					echo "$loginId Not found";
-				}
+// 			if ($stmt->execute() > 0) {
+// 				if (empty($result)) {
+// 					echo "$loginId not found";
+					
+// 				} else {
+// 					$uid = $result['uid'];
 
-			}
-		} catch (PDOException $e) {
-			echo $e->getmessage();
-		}
-	}
-}
+// 					$sql = "UPDATE users SET token = :token WHERE uid = :uid";
+// 					$stmt = $pdo->prepare($sql);
+// 					$stmt->bindValue(':token', $token);
+// 					$stmt->bindValue(':uid', $uid);
+// 					$stmt->execute();
+					
+// 					if ($stmt->execute()) {
+// 						echo "Token created";
+// 					}
 
-var_dump($_POST);
+// 				}
+
+// 			}
+// 		} catch (PDOException $e) {
+// 			echo $e->getmessage();
+// 		}
+// 	}
+// }
+
+
 ?>
 
 
 <!DOCTYPE HTML>
-<html>
+<html lang="en-US">
 	<head>
 		<title><?= $title ?></title>
 	</head>
 	<body>
-		<form method="POST" action="">
+		<form method="POST" action="./fgetpass.php">
 			<h2> Recover password</h2>
 			<div>
 			<label for="loginId">Enter you email address</label>
@@ -51,3 +66,4 @@ var_dump($_POST);
 		</form>
 	</body>
 </html>
+
