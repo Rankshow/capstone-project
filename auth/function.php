@@ -37,7 +37,7 @@ function sendEmail($recipient, $message)
         $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
         $mail->send();
-        echo 'Check email';
+        echo "A mail has sent to the specified email $recipient. Thank you.";
     } catch (Exception $e) {
         echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }
