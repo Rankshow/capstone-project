@@ -142,8 +142,7 @@ p:hover{
 }
 label{
   font-size: 14px;
-  margin-left: 2em;
-  
+  margin-left: 2em; 
 }
 p, a{
   margin-top: 10px;
@@ -239,4 +238,92 @@ p:hover{
   p:hover{
     text-decoration: underline;
   }
+}
+/* smaller screen size 320px */
+@media only screen and (max-width: 320px){
+input[type=text],
+input[type=number]
+{
+  padding: 1em;
+  width: 210px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+}
+.form-wrapper{
+  background: #244000;
+  height: auto;
+  width: 90%;
+  margin-bottom: 10px;
+}
+label{
+  font-size: 16px;
+}
+}
+@media only screen and (max-width: 415px){
+  input[type=text],
+  input[type=number]
+  {
+    padding: 1em;
+    width: 350px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+  } 
+  .form-wrapper{
+    background: #244000;
+    height: auto;
+    width: 95%;
+    margin-bottom: 10px;
+  }
+}
+@media only screen and (max-width: 428px){
+  input[type=text],
+  input[type=number]
+  {
+    padding: 1em;
+    width: 350px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+  } 
+  .form-wrapper{
+    background: #244000;
+    height: auto;
+    width: 95%;
+    margin-bottom: 10px;
+  }
+}
+@media only screen and (max-width: 412px){
+input[type=text],
+input[type=number]
+{
+  padding: 1em;
+  width: 250px;
+  border: none;
+  display: flex;
+  margin: 0 auto;
+  border-radius: 10px;
+  outline: none;
+}
+label{
+  font-size: 14px;
+  margin-left: 4em; 
+}
+}
+
+/* smaller screen size 360px */
+@media only screen and (max-width: 360px){
+input[type=text],
+input[type=number]
+{
+  padding: 1em;
+  width: 250px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+}
+.Reg-acct{
+  width: 250px;
+}
 }
