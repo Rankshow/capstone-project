@@ -83,7 +83,7 @@ include_once '../auth/dbconn.php';
 ?>
 
 <!DOCTYPE>
-<html>
+<html lang="en-US">
     <head>
         <title>EDit profile</title>
     </head>
