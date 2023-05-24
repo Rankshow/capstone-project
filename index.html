@@ -164,7 +164,12 @@
   </section>
   <!-- footer -->
 
-  <footer>
+  <footer>session_start();
+    if (empty($_SESSION)) {
+        header('Location: ../login.html');
+        exit();
+    }
+    
     <div class="footer-wrapper">
       <!-- <img class="footer-logo" src="./image/FARMER ASSIST 22222 2.png" alt="farmer-logo"> -->
       <h4>©2023. FarmAssist. All Right Reserved</h4>

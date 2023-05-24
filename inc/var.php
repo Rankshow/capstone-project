@@ -9,4 +9,3 @@ $myState = $_SESSION['state'];
 $myLga = $_SESSION['lga'];
 $myPhone = $_SESSION['phone'];
 $mylanguage = $_SESSION['language'];
-

@@ -36,7 +36,8 @@ if (isset($_POST['login'])) {
                     $_SESSION['lga'] = $result['lga'];
                     $_SESSION['phone'] = $result['phone'];
                     $_SESSION['language'] = $result['language'];
-                    
+                    $_SESSION['track'] = $result['track'];
+
                     header('location: ../info/profile.html.php');
                 } else {
                     $errMsg['login'] = "Invalid login details.";

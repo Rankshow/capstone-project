@@ -2,7 +2,7 @@
 
 session_start();
 if (empty($_SESSION)) {
-    header('Location: ../login.html');
+    header('Location: ../login.html.php');
     exit();
 }
 
@@ -16,3 +16,4 @@ $my_state = $_SESSION['state'];
 $my_lga = $_SESSION['lga'];
 $my_phone = $_SESSION['phone'];
 $my_language = $_SESSION['language'];
+$my_track = $_SESSION['track'];

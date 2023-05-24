@@ -68,7 +68,7 @@ include_once(__DIR__ . '/../inc/header.php');
 
             </table>
             <div class="text-center">
-                <a href="edit_profile.html.php" class="btn btn-secondary"><i class="bi bi-pencil-square"></i>Edit
+                <a href="edit_profile.php" class="btn btn-secondary"><i class="bi bi-pencil-square"></i>Edit
                     Profile</a>
             </div>
         </div>
